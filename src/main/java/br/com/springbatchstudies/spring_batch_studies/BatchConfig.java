@@ -37,7 +37,7 @@ public class BatchConfig {
     @Bean
     Step step(ItemReader<User> reader, ItemWriter<User> writer, JobRepository jobRepository) {
         return new StepBuilder("step", jobRepository)
-                .<User, User>chunk(200, transactionManager)
+                .<User, User>chunk(50, transactionManager)
                 .reader(reader)
                 .writer(writer)
                 .build();
