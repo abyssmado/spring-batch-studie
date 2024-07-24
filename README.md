@@ -7,13 +7,19 @@ Este projeto utiliza o Spring Batch para configurar e executar um job que lê da
 - BatchConfig: Classe de configuração do Spring Batch.
 - User: Classe modelo que representa os dados a serem processados.
 - DatasourceConfig: Classe de configuração do banco de dados.
-### Dependências
+### Dependências e Tecnologias
 As principais dependências do projeto são:
 
 `spring-boot-starter-batch`
 `spring-boot-starter-jdbc`
 `spring-boot-starter-data-jpa`
 `postgresql`
+<br>
+<br>
+Tecnologias utilizadas:
+- Java 17
+- SpringBoot
+- Maven
 
 ## Configurações
 ### application.properties
@@ -30,7 +36,7 @@ spring.datasource.driver-class-name=org.postgresql.Driver
 ### Para executar o projeto, siga os passos abaixo:
 
 1. Configure o banco de dados PostgreSQL com as credenciais apropriadas.
-2. Note que o arquivo users.csv ja está no diretório files/.
+2. Note que o arquivo users.csv ja está no diretório files/. (Arquivo utilizado como base para a inserção)
 3. Compile e execute o projeto utilizando o Spring Boot.
 
 ## Estrutura do Arquivo CSV
@@ -41,7 +47,8 @@ O arquivo CSV deve ter o seguinte formato:
 John Doe,30
 Jane Smith,25
 ```
-*O arquivo users.csv que se encontra já na pasta "files" contém 200 linhas para insert*
+*O arquivo users.csv que se encontra já na pasta "files" contém 200 linhas para insert*<br>
+*Na pasta raiz do projeto existe um script python para geração do csv, podendo ser definida a quantidade de linhas geradas.*
 
 # Banco de dados
 
